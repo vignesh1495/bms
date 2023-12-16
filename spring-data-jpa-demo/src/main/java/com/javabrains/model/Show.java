@@ -1,5 +1,7 @@
 package com.javabrains.model;
 
+import com.javabrains.enums.Language;
+import com.javabrains.enums.MovieFeature;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,8 +22,15 @@ public class Show extends BaseModel {
     @ManyToOne
     private Hall hall;
 
+    @Enumerated
+    private Language language;
+
     @OneToMany
-    private List<Seats> seats;
+    private List<ShowSeats> showSeats;
+
+    @ElementCollection
+    @Enumerated
+    private List<MovieFeature> features = new ArrayList<>();
 
     private Date startTime;
     private Integer duration;
