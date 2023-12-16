@@ -1,8 +1,8 @@
 package com.javabrains.Repository;
 
-import com.javabrains.model.Hall;
+import com.javabrains.model.Show;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ShowRepository extends JpaRepository<Hall,Long> {
+public interface ShowRepository extends JpaRepository<Show,Long> {
 
 }

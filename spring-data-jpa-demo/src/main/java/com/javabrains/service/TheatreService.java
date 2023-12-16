@@ -36,4 +36,8 @@ public class TheatreService {
         return new GetTheatreResponse();
     }
 
+    public Theatre getTheatre(String name){
+        return theatreRepository.findByName(name).get();
+    }
+
 }

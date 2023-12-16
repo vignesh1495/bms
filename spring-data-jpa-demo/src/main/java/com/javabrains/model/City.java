@@ -18,6 +18,5 @@ public class City extends BaseModel {
 
     String name;
     @OneToMany
-    @JsonIgnore
     List<Theatre> theatres;
 }

@@ -1,5 +1,6 @@
 package com.javabrains.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -21,6 +22,7 @@ public class Theatre extends BaseModel {
     private List<Hall> halls;
 
     @ManyToOne
+    @JsonIgnore
     private City city;
 
 

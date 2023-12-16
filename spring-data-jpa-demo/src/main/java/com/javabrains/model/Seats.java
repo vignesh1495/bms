@@ -1,9 +1,9 @@
 package com.javabrains.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.javabrains.enums.SeatType;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,6 +12,9 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name="seats")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Seats extends BaseModel {
 
     private String name;
@@ -20,6 +23,7 @@ public class Seats extends BaseModel {
     private SeatType seatType;
 
     @ManyToOne
+    @JsonIgnore
     private Hall hall;
 
 }

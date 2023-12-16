@@ -1,22 +1,17 @@
 package com.javabrains.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 @Entity
-@Table(name="user")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
+@Table(name="user",uniqueConstraints = {@UniqueConstraint(columnNames = {"firstname", "lastname"})})
 public class User extends BaseModel {
 
 	private String firstname;
