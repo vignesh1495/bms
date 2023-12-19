@@ -1,8 +1,7 @@
 package com.javabrains.model;
 
 import com.javabrains.enums.ShowSeatsStatus;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -10,6 +9,9 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Table(name="showseats")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ShowSeats extends BaseModel{
 
     private Double price;

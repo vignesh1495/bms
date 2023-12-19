@@ -2,8 +2,7 @@ package com.javabrains.model;
 
 import com.javabrains.enums.Language;
 import com.javabrains.enums.MovieFeature;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -14,6 +13,9 @@ import java.util.List;
 @Getter
 @Setter
 @Table(name = "shows")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Show extends BaseModel {
 
     @ManyToOne

@@ -2,6 +2,9 @@ package com.javabrains.model;
 
 import com.javabrains.enums.Language;
 import com.javabrains.enums.MovieFeature;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -13,10 +16,13 @@ import java.util.List;
 
 @Entity
 @Table(name = "movie")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Movie extends BaseModel {
 
         private String name;
-        private Double rating;
+        private Integer rating;
         @ElementCollection
         @Enumerated
         private List<Language> languages = new ArrayList<>();

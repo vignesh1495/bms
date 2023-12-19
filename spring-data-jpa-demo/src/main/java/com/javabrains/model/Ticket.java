@@ -1,8 +1,7 @@
 package com.javabrains.model;
 
 import com.javabrains.enums.TicketStatus;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -12,6 +11,9 @@ import java.util.List;
 @Getter
 @Setter
 @Table(name = "tickets")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Ticket extends BaseModel {
 
 

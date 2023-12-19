@@ -39,4 +39,7 @@ public class HallService {
                 return new GetHallResponse(hallEntity.id,hallEntity.getTheatre(),hallEntity.getShows(),hallEntity.getSeats());
         }
 
+    public Hall getHallById(Long hallId) {
+              return  hallRepository.getById(hallId);
+    }
 }
