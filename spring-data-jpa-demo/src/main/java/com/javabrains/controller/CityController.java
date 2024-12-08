@@ -24,9 +24,6 @@ public class CityController {
 
        return cityService.saveCity(createCityRequest.toCity());
 
-
-
-
     }
 
 
